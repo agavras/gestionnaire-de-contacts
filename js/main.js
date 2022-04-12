@@ -25,11 +25,13 @@ btnAjouter.addEventListener('click', ajouterContact)
 function ajouterContact() {
   if (champPrenom.value !== "") {
     if (champNom !== "") {
-      contacts.push(new Contact(champNom.value, champPrenom.value))
+      // contacts.push(new Contact(champNom.value, champPrenom.value))
+      let newcontact=new Contact(champNom.value, champPrenom.value)
+      newcontact.ajouteContact(contacts)
     }
   }
-champPrenom.value = null
-champNom.value = null
+// champPrenom.value = null
+// champNom.value = null
 }
 
 function executerChoix () {
